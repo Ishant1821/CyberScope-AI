@@ -2,6 +2,20 @@
 
 CyberScope-AI is a lightweight, machine-learning-powered SIEM platform designed specifically for monitoring IoT edge networks. It ingests real-time telemetry from edge nodes (like ESP32 sensors), detects hardware anomalies or security threats using unsupervised machine learning, and visualizes the data in a secure, enterprise-grade Security Operations Center (SOC) dashboard.
 
+## 📸 Interface Showcase
+
+**1. SOC Dashboard & Real-Time Analytics**
+*(Drag and drop your dashboard screenshot here)*
+
+**2. Incident Management & AI Threat Classification**
+*(Drag and drop your incidents ledger screenshot here)*
+
+**3. ML Benchmarking & Security Analytics**
+*(Drag and drop your analytics screenshot here)*
+
+**4. Deep Log Analyzer**
+*(Drag and drop your log analyzer screenshot here)*
+
 ## ✨ Key Features
 
 *   **Unsupervised Machine Learning:** Utilizes `scikit-learn` (Isolation Forest) to establish operational baselines and detect zero-day thermal/power anomalies without relying on static thresholds.
