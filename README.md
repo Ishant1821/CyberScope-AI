@@ -5,7 +5,7 @@ CyberScope-AI is a lightweight, machine-learning-powered SIEM platform designed 
 ## 📸 Interface Showcase
 
 **1. SOC Dashboard & Real-Time Analytics**
-*(Drag and drop your dashboard screenshot here)*
+image_9b7799.png
 
 **2. Incident Management & AI Threat Classification**
 *(Drag and drop your incidents ledger screenshot here)*
