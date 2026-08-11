@@ -5,16 +5,18 @@ CyberScope-AI is a lightweight, machine-learning-powered SIEM platform designed 
 ## 📸 Interface Showcase
 
 **1. SOC Dashboard & Real-Time Analytics**
-image_9b7799.png
+![Dashboard](assets/Screenshot%202026-08-11%20230717.png)
 
 **2. Incident Management & AI Threat Classification**
-*(Drag and drop your incidents ledger screenshot here)*
+![Incidents Management](assets/Screenshot%202026-08-11%20230752.png)
 
 **3. ML Benchmarking & Security Analytics**
-*(Drag and drop your analytics screenshot here)*
+![Security Analytics](assets/Screenshot%202026-08-11%20230811.png)
 
 **4. Deep Log Analyzer**
-*(Drag and drop your log analyzer screenshot here)*
+![Log Analyzer](assets/Screenshot%202026-08-11%20230825.png)
+
+*(Note: If the screenshots appear out of order, you can simply swap the filenames in the markdown links above!)*
 
 ## ✨ Key Features
 
@@ -52,7 +54,3 @@ image_9b7799.png
 │   └── pdf_generator.py    # ReportLab PDF creation logic
 ├── static/css/             # Stylesheets (cyberscope.css)
 └── templates/              # HTML Views (dashboard, incidents, analyzer)
-
-git clone [https://github.com/Ishant1821/CyberScope-AI.git](https://github.com/Ishant1821/CyberScope-AI.git)
-cd CyberScope-AI
-pip install -r requirements.txt
