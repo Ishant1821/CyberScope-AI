@@ -52,3 +52,7 @@ CyberScope-AI is a lightweight, machine-learning-powered SIEM platform designed 
 │   └── pdf_generator.py    # ReportLab PDF creation logic
 ├── static/css/             # Stylesheets (cyberscope.css)
 └── templates/              # HTML Views (dashboard, incidents, analyzer)
+
+git clone [https://github.com/Ishant1821/CyberScope-AI.git](https://github.com/Ishant1821/CyberScope-AI.git)
+cd CyberScope-AI
+pip install -r requirements.txt
