@@ -1,0 +1,9 @@
+Flask
+Flask-Login
+Werkzeug
+scikit-learn
+numpy
+joblib
+requests
+reportlab
+pytest

@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block content %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<h2>Security Analytics & ML Benchmarking</h2>
+
+<div class="metrics-grid">
+    <div class="card">
+        <h3>Primary Detection Engine</h3>
+        <div class="metric-value">Isolation Forest</div>
+    </div>
+    <div class="card">
+        <h3>Targeted Variables</h3>
+        <div class="metric-value">Temp & Voltage</div>
+    </div>
+    <div class="card">
+        <h3>Ingest Protocol</h3>
+        <div class="metric-value">REST API / JSON</div>
+    </div>
+</div>
+
+<h3 style="margin-top: 2rem;">Algorithm Performance Comparison</h3>
+
+{% if benchmark_data %}
+<div class="metrics-grid" style="grid-template-columns: 2fr 1fr;">
+    <!-- Bar Chart for Detection Rates -->
+    <div class="card" style="height: 350px;">
+        <h3 style="margin-bottom: 1rem;">Anomaly Detection Rate (%)</h3>
+        <div style="height: 280px; width: 100%;">
+            <canvas id="benchmarkChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Detailed Stats Table -->
+    <div class="card">
+        <h3 style="margin-bottom: 1rem;">Resource Metrics</h3>
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+            <thead>
+                <tr>
+                    <th style="background: transparent; padding: 0.5rem; border-bottom: 1px solid var(--border-color);">Model</th>
+                    <th style="background: transparent; padding: 0.5rem; border-bottom: 1px solid var(--border-color);">False Alarms</th>
+                    <th style="background: transparent; padding: 0.5rem; border-bottom: 1px solid var(--border-color);">Compute (s)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for model, stats in benchmark_data.items() %}
+                <tr>
+                    <td style="padding: 0.8rem 0.5rem; border-bottom: 1px solid var(--border-color);"><strong>{{ model }}</strong></td>
+                    <td style="padding: 0.8rem 0.5rem; border-bottom: 1px solid var(--border-color); color: var(--accent-red);">{{ stats.false_positives }}</td>
+                    <td style="padding: 0.8rem 0.5rem; border-bottom: 1px solid var(--border-color); color: var(--accent-yellow);">{{ stats.time_taken }}s</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    const models = [];
+    const detectionRates = [];
+
+    {% for model, stats in benchmark_data.items() %}
+        models.push("{{ model }}");
+        detectionRates.push({{ stats.detection_rate }});
+    {% endfor %}
+
+    const ctx = document.getElementById('benchmarkChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: models,
+            datasets: [{
+                label: 'Detection Accuracy (%)',
+                data: detectionRates,
+                backgroundColor: ['#38bdf8', '#4ade80', '#facc15'],
+                borderColor: ['#0f172a', '#0f172a', '#0f172a'],
+                borderWidth: 2,
+                borderRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    grid: { color: '#334155' },
+                    ticks: { color: '#94a3b8' }
+                },
+                x: {
+                    grid: { display: false },
+                    ticks: { color: '#f8fafc', font: { weight: 'bold' } }
+                }
+            },
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
+</script>
+{% else %}
+<div class="card" style="text-align: center; padding: 3rem;">
+    <h3 style="color: var(--accent-yellow);">⚠️ No Benchmark Data Found</h3>
+    <p style="color: var(--text-muted);">Run <code>python benchmark.py</code> in your terminal to generate the comparative model data.</p>
+</div>
+{% endif %}
+{% endblock %}
