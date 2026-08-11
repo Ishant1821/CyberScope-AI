@@ -5,18 +5,22 @@ CyberScope-AI is a lightweight, machine-learning-powered SIEM platform designed 
 ## 📸 Interface Showcase
 
 **1. SOC Dashboard & Real-Time Analytics**
-![Dashboard](assets/Screenshot%202026-08-11%20230752.png)
+![Dashboard](assets/Screenshot%202026-08-11%20230717.png)
 
 **2. Incident Management & AI Threat Classification**
-![Incidents Management](assets/Screenshot%202026-08-11%20230811.png)
+![Incidents Management](assets/Screenshot%202026-08-11%20230752.png)
 
 **3. ML Benchmarking & Security Analytics**
-![Security Analytics](assets/Screenshot%202026-08-11%20230825.png)
+![Security Analytics](assets/Screenshot%202026-08-11%20230811.png)
 
 **4. Deep Log Analyzer**
-![Log Analyzer](assets/Screenshot%202026-08-11%20230717.png)
+![Log Analyzer](assets/Screenshot%202026-08-11%20230825.png)
 
-*(Note: If the screenshots appear out of order, you can simply swap the filenames in the markdown links above!)*
+## 📊 Project Research Poster
+
+Here is the official academic research poster summarizing the architecture, methodology, system flowchart, and evaluation of CyberScope-AI:
+
+![Project Research Poster](assets/WhatsApp%20Image%202026-08-11%20at%2023.54.56.jpeg)
 
 ## ✨ Key Features
 
