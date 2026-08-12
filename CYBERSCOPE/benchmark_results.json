@@ -1,1 +1,0 @@
-{"Isolation Forest": {"detection_rate": 73.0, "false_positives": 400, "time_taken": 0.2353}, "One-Class SVM": {"detection_rate": 47.0, "false_positives": 300, "time_taken": 0.2501}, "Local Outlier Factor": {"detection_rate": 60.2, "false_positives": 432, "time_taken": 0.065}}
