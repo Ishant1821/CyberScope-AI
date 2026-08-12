@@ -20,7 +20,7 @@ CyberScope-AI is a lightweight, machine-learning-powered SIEM platform designed 
 
 Here is the official academic research poster summarizing the architecture, methodology, system flowchart, and evaluation of CyberScope-AI:
 
-![Project Research Poster](assets/WhatsApp%Image%2026-08-13 at 00.15.48.jpeg)
+![Project Research Poster](assets/WhatsApp Image 2026-08-13 at 00.15.48.jpeg)
 
 ## ✨ Key Features
 
