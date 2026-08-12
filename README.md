@@ -14,7 +14,7 @@ CyberScope-AI is a lightweight, machine-learning-powered SIEM platform designed 
 ![Security Analytics](assets/image_2026-08-12_235259749.png)
 
 **4. Deep Log Analyzer**
-![Log Analyzer](assets/Screenshot%202026-08-11%20230717.png)
+![Log Analyzer](assets/image_2026-08-12_235448603.png)
 
 ## 📊 Project Research Poster
 
